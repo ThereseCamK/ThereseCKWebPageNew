@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminPage</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/model.js"></script>
+    <script src="views/about.js"></script>
+    <script src="views/blog.js"></script>
+    <script src="views/feedback.js"></script>
+    <script src="views/projects.js"></script>
+    <script src="admin/view/blogView.js"></script>
+    <script src="admin/controllers/blogController.js"></script>
+    <script src="admin/view/projectView.js"></script>
+    <script src="admin/controllers/projectController.js"></script>
+    <link href="index.html" />
+</head>
+<body>
+    <div id="adminContent"></div>
+
+<script>
+
+
+    adminView();
+    function adminView(){
+
+        html = `
+                <button onclick="addProjects()">Legg til Prosjekt</button><br>
+                <button onclick="addBlogCommitment()">Legg til Blog</button><br>
+                <button onclick="approveReview()"> Godkjen tilbakemeldinger</button>
+            `;
+        document.getElementById('adminContent').innerHTML = html;
+    }
+
+
+</script>
+</body>
+</html>
